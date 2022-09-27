@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel='stylesheet' href='/stylesheets/home.css' />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel='stylesheet' href='/stylesheets/login.css' />
+    <link rel='stylesheet' href='/stylesheets/profile.css' />
+    <link rel='stylesheet' href='/stylesheets/register.css' />
+    <title>Document</title>
+</head>
+<body>
+    <form style="border:1px solid #ccc" method="get">
+        <div class="container">
+            <h1>Customer Details</h1>
+            <h2>Welcome </h2>
+    
+    <table border="1">
+        <% for(i=0;i<data.length;i++)
+        {
+            %>
+        
+        <tr:hover {background-color: coral;}
+        >
+        <td><%=data[i].cid%>
+        <td><%=data[i].name%>
+        <td><%=data[i].address%>
+        <td><%=data[i].phone%>
+        <td><%=data[i].status%>
+        <td><a class="fa-solid fa-delete-left" ; href="/deleteemployee/<%=data[i].emp_id%>"> Delete </a>
+        <td><a class="fa-solid fa-pen-to-square"; href="/editdata/<%=data[i].emp_id%>"> Edit </a>
+                
+        <%
+        }
+         %>
+        
+        </table>
+        </div>
+       
+    </body>
+    </form>  
+</body>
+</html>
+
